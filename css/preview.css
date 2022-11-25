@@ -1,0 +1,148 @@
+:root {
+    --black: #3a352f;
+    --orange: #ffc23f;
+    --icon_color: #ababaa;
+    --white: #fff;
+}
+
+
+.preview {
+    background-image: url(../img/preview1.jpeg);
+    display: flex;
+    height: 500px;
+    width: 800px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.preview::before {
+    content: "";
+    display: flex;
+    width: 800px;
+    position: absolute;
+    height: 500px;
+    background-color: black;
+    opacity: 0.366;
+}
+
+
+.preview img {
+    display: flex;
+    /* width: 100px; */
+    /* height: 80px; */
+    margin-bottom: -10px;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    z-index: 9999;
+    width: 210px;
+    height: 200px;
+    margin: 20px;
+    padding: 40px 30px;
+    justify-content: space-between;
+}
+
+.box h3 {
+    margin-right: 50px;
+    color: var(--black);
+    font-size: 26px;
+    position: relative;
+    z-index: 440;
+}
+
+.box h3::before {
+    content: "";
+    display: inline-block;
+    width: 78px;
+    height: 13px;
+    background-color: #ffe7b8;
+    position: absolute;
+    bottom: 6px;
+    z-index: -2;
+}
+
+.buy {
+    color: var(--icon_color);
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.preview-img {
+    display: flex;
+    align-items: end;
+    margin-bottom: -20px;
+    margin-left: 20px;
+}
+
+.preview_1 {
+    width: 130px;
+    height: 100px;
+    z-index: 7777;
+    box-shadow: 0 1px 10px #85817b;
+}
+
+.preview_2,
+.preview_3 {
+    width: 110px;
+    height: 70px;
+    box-shadow: 0 1px 10px #85817b;
+    position: relative;
+}
+
+/* .preview_2::before, .preview_3::before{
+    /* content: "";
+    display: flex;
+    width: 110px;
+    position: absolute;
+    height: 70px;
+    background-color: black;
+    opacity: 0.366;} */
+
+
+.icon-box {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 800px;
+    height: 200px;
+    margin-top: 100px;
+}
+
+.icon-card {
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    justify-content: space-between;
+}
+
+.icon-card i {
+    font-size: 50px;
+    color: var(--icon_color);
+}
+
+.arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid var(--icon_color);
+    cursor: pointer;
+}
+
+.icon-card h5{
+    margin-top: 20px;
+    width: 100px;
+}
+
+.arrow i {
+    font-size: 16px;
+   color: #5f5b56;
+}
