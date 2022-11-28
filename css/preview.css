@@ -16,6 +16,7 @@
     background-position: center center;
     flex-direction: column;
     justify-content: space-between;
+    position: relative;
 }
 
 .preview::before {
@@ -31,8 +32,6 @@
 
 .preview img {
     display: flex;
-    /* width: 100px; */
-    /* height: 80px; */
     margin-bottom: -10px;
 }
 
@@ -96,29 +95,26 @@
     position: relative;
 }
 
-/* .preview_2::before, .preview_3::before{
-    /* content: "";
-    display: flex;
-    width: 110px;
-    position: absolute;
-    height: 70px;
-    background-color: black;
-    opacity: 0.366;} */
-
-
 .icon-box {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     width: 800px;
-    height: 200px;
-    margin-top: 100px;
+    height: 300px;
+    margin-top: 70px;
 }
 
 .icon-card {
     display: flex;
     flex-direction: column;
-    height: 200px;
+    height: 300px;
+    padding: 20px 40px;
     justify-content: space-between;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+.icon-card:hover{
+    background-color: var(--orange);
 }
 
 .icon-card i {
@@ -135,6 +131,11 @@
     border-radius: 50%;
     border: 2px solid var(--icon_color);
     cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.arrow:hover{
+    border-color: #3a352f;
 }
 
 .icon-card h5{
@@ -145,4 +146,64 @@
 .arrow i {
     font-size: 16px;
    color: #5f5b56;
+}
+
+.fa-gift2{
+    margin-bottom: 20px;
+}
+
+.pulse2{
+    width: 30px;
+    padding: 5px 0;
+}
+
+.pulse2, .pulse3, .pulse4{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px;
+    transform: scale(1.2);
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+    background-color: #fff;
+    z-index: 666;
+}
+
+.pulse2::after, .pulse3::after, .pulse4::before {
+    position: absolute;
+    content: "";
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1.5px solid #fff;
+    animation: pulse 2s infinite;
+  }
+
+  .pulse2::before, .pulse3::before, .pulse4::before {
+    position: absolute;
+    content: "";
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1.5px solid #fff;
+    animation: pulse 2s infinite;
+    animation-delay: 1s;
+  }
+
+.pulse3{
+    left: 580px;
+    top: 160px;
+    width: 30px;
+    height: 30px;
+    position: absolute; 
+}
+
+.pulse4{
+    position: absolute;
+    top: 200px;
+    left: 380px;
+    width: 30px;
+    height: 30px;
 }

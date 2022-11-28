@@ -1,5 +1,6 @@
 @import url(./section.css);
 @import url(./preview.css);
+@import url(./john-maybe.css);
 
 * {
     margin: 0;
@@ -17,6 +18,7 @@
 
 body{
     background-color: #fafafa;
+    overflow-x: hidden;
 }
 
 .container{
@@ -35,7 +37,7 @@ nav{
 }
 
 .logo img{
-    width: 60px;
+    width: 80px;
 }
 
 .desc {
@@ -50,6 +52,25 @@ nav{
     color: var(--black);
     font-weight: bold;
     font-size: 14px;
+    position: relative;
+    z-index: 9999;
+}
+
+.desc li a::after{
+    content: '';
+    display: flex;
+    width: 100%;
+    height: 8px;
+    background-color: #ffe7b8;
+    position: absolute;
+    bottom: -1px;
+    z-index: -2;
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+.desc li:hover a::after{
+    opacity: 1;
 }
 
 .search{
